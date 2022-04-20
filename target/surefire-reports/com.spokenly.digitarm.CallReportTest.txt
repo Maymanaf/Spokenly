@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.spokenly.digitarm.CallReportTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 28.751 s <<< FAILURE! - in com.spokenly.digitarm.CallReportTest
+SelectCallAndGrid2(com.spokenly.digitarm.CallReportTest)  Time elapsed: 4.701 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid2(CallReportTest.java:64)
+
