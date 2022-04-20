@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Random;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -85,13 +86,20 @@ public class CallReportPO extends PageObject {
 	@FindBy(xpath = "//span[@class='MuiButton-label' and contains(text(),'Envoie')]")
 	private WebElement SendButton;
 
-	@FindBy(xpath = "//input[@name='row-radio-buttons-group' and @value='1']")
+//	@FindBy(xpath = "//input[@name='row-radio-buttons-group' and @value='1']")
+//	private List<WebElement> SubItemsRadioBtn;
+	
+	@FindBy(xpath = "//input[@name='value' and @value='0']")
 	private List<WebElement> SubItemsRadioBtn;
+
+
+	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-lg-5']/h6")
+	public WebElement NumberOfActivityCalls;
 
 // Search Non Evaluated Calls by Agents
 	public void FilterSearch(String AgentID, String CallType) throws InterruptedException {
 		AdvancedFilterBtn.click();
-		if (CallType .equalsIgnoreCase("Entrant")) {
+		if (CallType.equalsIgnoreCase("Entrant")) {
 			EntrantRadio.click();
 		} else if (CallType.equalsIgnoreCase("Sortant")) {
 			SortantRadio.click();
@@ -109,35 +117,37 @@ public class CallReportPO extends PageObject {
 //Search Non Evaluated Calls by Activities
 	public void FilterSearchWithActivity(String ActivityName, String CallType) throws InterruptedException {
 		AdvancedFilterBtn.click();
-		if (CallType .equalsIgnoreCase("Entrant")) {
+		if (CallType.equalsIgnoreCase("Entrant")) {
 			EntrantRadio.click();
 		} else if (CallType.equalsIgnoreCase("Sortant")) {
 			SortantRadio.click();
 		}
 		NonEvalueRadio.click();
 		AllActivitiesField.click();
+			Thread.sleep(1000);
 		WebElement MyActivites = driver.findElement(By.xpath("//li[normalize-space()='" + ActivityName + "']"));
-		wait.until(ExpectedConditions.textToBePresentInElementValue(MyActivites,ActivityName));
-		Thread.sleep(1000);
+		wait.until(ExpectedConditions.elementToBeClickable(MyActivites));
 		MyActivites.click();
+		wait.until(ExpectedConditions.textToBePresentInElement(MyActivites, ActivityName));
 
 	}
 
 //Selecting First Call then Select the corresponding grid is needed
 	public void GridSelecting(String GridName, boolean WillISelectGrid) {
 
-		FirstElementDetailsBtn.click();
-		AssessCallButton.click();
-		if (WillISelectGrid == true) {
-			WebElement MyGrid = driver.findElement(By.xpath("//input[@value= '" + GridName + "']"));
-			wait.until(ExpectedConditions.elementToBeClickable(MyGrid));
-			MyGrid.click();
-			NextButton.click();
+			FirstElementDetailsBtn.click();
+			AssessCallButton.click();
+			if (WillISelectGrid == true) {
+				WebElement MyGrid = driver.findElement(By.xpath("//input[@value='" + GridName + "']"));
+				//wait.until(ExpectedConditions.elementToBeClickable(MyGrid));
+				MyGrid.click();
+				NextButton.click();
+			}
 		}
-	}
+
 
 //Evaluating the Grid with random values
-	public void EvaluateGrid() throws InterruptedException {
+	public void EvaluateGrid() {
 		String[] EvalsNote = { "0", "1", "NE" };
 		Random RanDom = new Random();
 		for (int Itemcount = 1; Itemcount < ItemRadioButton.size(); Itemcount++) {
@@ -145,7 +155,7 @@ public class CallReportPO extends PageObject {
 				// select a random value from the string array
 				int RandEval = RanDom.nextInt(EvalsNote.length);
 				List<WebElement> SubItemsEval = driver.findElements(
-						By.xpath("//input[@name='row-radio-buttons-group' and @value='" + EvalsNote[RandEval] + "']"));
+						By.xpath("//input[@name='value' and @value='" + EvalsNote[RandEval] + "']"));
 				// click on every radio button of a sub-item
 				boolean selectState = SubItemsEval.get(ElmntIndex).isSelected();
 				if (selectState == false) {
@@ -165,5 +175,12 @@ public class CallReportPO extends PageObject {
 		PrioritesField.sendKeys("Qualité de ce qui vient, passe en premier, dans le temps.");
 		MoyensField.sendKeys("Qui se trouve entre deux extrêmes.");
 		SendButton.click();
+	}
+
+//Verifying if there is calls available for the selected activity
+	public int CallsNumber() {
+		String StringNumberOfCalls = StringUtils.substringBefore(NumberOfActivityCalls.getText(), " results found");
+		int NumberOfCalls = Integer.parseInt(StringNumberOfCalls);
+		return NumberOfCalls;
 	}
 }

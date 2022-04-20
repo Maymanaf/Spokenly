@@ -5,9 +5,9 @@
     <classes>
       <class name="com.spokenly.digitarm.CallReportTest">
         <methods>
-          <include name="SelectCallAndGrid4" invocation-numbers="0 1 2 3 4 5 6"/>
           <include name="SetUpChrome"/>
           <include name="tearDown"/>
+          <include name="SelectCallAndGrid3" invocation-numbers="6"/>
         </methods>
       </class> <!-- com.spokenly.digitarm.CallReportTest -->
     </classes>

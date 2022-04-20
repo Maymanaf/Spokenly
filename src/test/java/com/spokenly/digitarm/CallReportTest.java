@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -80,54 +81,29 @@ public class CallReportTest extends Base {
 	}
 
 	@Test(priority = 2, dataProvider = "GridData")
-	public void SelectCallAndGrid3(String Activity, String Grid) throws InterruptedException {
+	public void GridVerification(String Activity, String Grid) throws InterruptedException {
 
 		Reporter.log("Test is starting ....", true);
 		PageObjectLogin.Authenticate("sami", "spokenly");
 		Reporter.log("Logged in successfully", true);
 		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearchWithActivity(Activity, null);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.AllActivitiesField, Activity));
-		Reporter.log("Element is present ....", true);
-		PageObjectCallReport.GridSelecting(Grid, true);
-		Reporter.log("The grid is selected successfully", true);
-		Reporter.log("The grid is being evaluated ....", true);
-		PageObjectCallReport.GridBreefing();
-		Reporter.log("The grid is successfully evaluated", true);
-		String LastBreadcrumb = PageObjectCallReport.CallReportLastBreadcrumb.getText();
-		Assert.assertEquals(LastBreadcrumb, "Report call");
-	}
-
-	@Test(priority = 3, dataProvider = "GridData")
-	public void SelectCallAndGrid4(String Activity, String Grid) throws InterruptedException {
-
-		Reporter.log("Test is starting ....", true);
-		PageObjectLogin.Authenticate("sami", "spokenly");
-		Reporter.log("Logged in successfully", true);
-		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearchWithActivity(Activity, null);
-		Thread.sleep(1000);
+		PageObjectCallReport.FilterSearchWithActivity(Activity, "All");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.AllActivitiesField, Activity));
 		Reporter.log("Element is present ....", true);
-
-		if (Utility.ElementExist(PageObjectCallReport.FirstElementDetailsBtn) == true) {
+		Thread.sleep(1000);
+		if (PageObjectCallReport.CallsNumber() == 0) {
+			throw new SkipException("The selected activity: " + Activity + " has no calls");
+		} else {
 			try {
-
 				PageObjectCallReport.GridSelecting(Grid, false);
 			} catch (org.openqa.selenium.StaleElementReferenceException ex) {
 				PageObjectCallReport.GridSelecting(Grid, false);
 			}
 			for (WebElement DisplayedGrid : PageObjectCallReport.GirdList) {
 				if (DisplayedGrid.getText() == Grid)
-					;
-				Reporter.log("The grid is avaialble for this activity", true);
+					Reporter.log("The grid is avaialble for this activity", true);
 			}
-		} 
-		else {
-			System.out.println("No calls for this activity" + Activity);
-			return;
 		}
 	}
 

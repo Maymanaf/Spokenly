@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="10" passed="0" failed="7" skipped="0">
+<testng-results ignored="2" total="9" passed="6" failed="0" skipped="1">
   <reporter-output>
     <line>
       <![CDATA[Driver got initialized]]>
@@ -14,19 +14,7 @@
       <![CDATA[Running Filter ....]]>
     </line>
     <line>
-      <![CDATA[Browser closed]]>
-    </line>
-    <line>
-      <![CDATA[Driver got initialized]]>
-    </line>
-    <line>
-      <![CDATA[Test is starting ....]]>
-    </line>
-    <line>
-      <![CDATA[Logged in successfully]]>
-    </line>
-    <line>
-      <![CDATA[Running Filter ....]]>
+      <![CDATA[Element is present ....]]>
     </line>
     <line>
       <![CDATA[Browser closed]]>
@@ -44,19 +32,7 @@
       <![CDATA[Running Filter ....]]>
     </line>
     <line>
-      <![CDATA[Browser closed]]>
-    </line>
-    <line>
-      <![CDATA[Driver got initialized]]>
-    </line>
-    <line>
-      <![CDATA[Test is starting ....]]>
-    </line>
-    <line>
-      <![CDATA[Logged in successfully]]>
-    </line>
-    <line>
-      <![CDATA[Running Filter ....]]>
+      <![CDATA[Element is present ....]]>
     </line>
     <line>
       <![CDATA[Browser closed]]>
@@ -74,19 +50,7 @@
       <![CDATA[Running Filter ....]]>
     </line>
     <line>
-      <![CDATA[Browser closed]]>
-    </line>
-    <line>
-      <![CDATA[Driver got initialized]]>
-    </line>
-    <line>
-      <![CDATA[Test is starting ....]]>
-    </line>
-    <line>
-      <![CDATA[Logged in successfully]]>
-    </line>
-    <line>
-      <![CDATA[Running Filter ....]]>
+      <![CDATA[Element is present ....]]>
     </line>
     <line>
       <![CDATA[Browser closed]]>
@@ -102,24 +66,81 @@
     </line>
     <line>
       <![CDATA[Running Filter ....]]>
+    </line>
+    <line>
+      <![CDATA[Element is present ....]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Driver got initialized]]>
+    </line>
+    <line>
+      <![CDATA[Test is starting ....]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Running Filter ....]]>
+    </line>
+    <line>
+      <![CDATA[Element is present ....]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Driver got initialized]]>
+    </line>
+    <line>
+      <![CDATA[Test is starting ....]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Running Filter ....]]>
+    </line>
+    <line>
+      <![CDATA[Element is present ....]]>
+    </line>
+    <line>
+      <![CDATA[Browser closed]]>
+    </line>
+    <line>
+      <![CDATA[Driver got initialized]]>
+    </line>
+    <line>
+      <![CDATA[Test is starting ....]]>
+    </line>
+    <line>
+      <![CDATA[Logged in successfully]]>
+    </line>
+    <line>
+      <![CDATA[Running Filter ....]]>
+    </line>
+    <line>
+      <![CDATA[Element is present ....]]>
     </line>
     <line>
       <![CDATA[Browser closed]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-04-20T10:10:19 WAT" name="Default suite" finished-at="2022-04-20T10:10:44 WAT" duration-ms="25662">
+  <suite started-at="2022-04-20T14:38:20 WAT" name="Default suite" finished-at="2022-04-20T14:39:03 WAT" duration-ms="43057">
     <groups>
     </groups>
-    <test started-at="2022-04-20T10:10:19 WAT" name="Default test" finished-at="2022-04-20T10:10:44 WAT" duration-ms="25662">
+    <test started-at="2022-04-20T14:38:20 WAT" name="Default test" finished-at="2022-04-20T14:39:03 WAT" duration-ms="43057">
       <class name="com.spokenly.digitarm.CallReportTest">
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:19 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:22 WAT" duration-ms="2507" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:21 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:23 WAT" duration-ms="2024" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:22 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:23 WAT" duration-ms="1512" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:23 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:27 WAT" duration-ms="4653" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -132,45 +153,6 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -181,13 +163,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:23 WAT" name="tearDown" finished-at="2022-04-20T10:10:24 WAT" duration-ms="481" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:27 WAT" name="tearDown" finished-at="2022-04-20T14:38:28 WAT" duration-ms="261" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -197,14 +182,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:24 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:25 WAT" duration-ms="1231" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:28 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:29 WAT" duration-ms="1180" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:25 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:26 WAT" duration-ms="1032" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:29 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:33 WAT" duration-ms="4631" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -217,45 +202,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -266,13 +212,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:26 WAT" name="tearDown" finished-at="2022-04-20T10:10:30 WAT" duration-ms="4406" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:33 WAT" name="tearDown" finished-at="2022-04-20T14:38:34 WAT" duration-ms="341" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -282,14 +231,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:30 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:32 WAT" duration-ms="1217" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:34 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:35 WAT" duration-ms="1261" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:32 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:33 WAT" duration-ms="1125" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:35 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:39 WAT" duration-ms="4247" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -302,45 +251,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -351,13 +261,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:33 WAT" name="tearDown" finished-at="2022-04-20T10:10:33 WAT" duration-ms="558" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:39 WAT" name="tearDown" finished-at="2022-04-20T14:38:40 WAT" duration-ms="212" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -367,14 +280,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:33 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:35 WAT" duration-ms="1250" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:40 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:41 WAT" duration-ms="1395" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:35 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:36 WAT" duration-ms="1052" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:41 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:45 WAT" duration-ms="4309" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -387,45 +300,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -436,13 +310,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:36 WAT" name="tearDown" finished-at="2022-04-20T10:10:36 WAT" duration-ms="418" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:45 WAT" name="tearDown" finished-at="2022-04-20T14:38:45 WAT" duration-ms="230" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -452,14 +329,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:36 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:37 WAT" duration-ms="1277" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:45 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:47 WAT" duration-ms="1396" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:37 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:38 WAT" duration-ms="1031" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:47 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:52 WAT" duration-ms="5079" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -472,45 +349,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -521,13 +359,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:38 WAT" name="tearDown" finished-at="2022-04-20T10:10:39 WAT" duration-ms="407" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:52 WAT" name="tearDown" finished-at="2022-04-20T14:38:52 WAT" duration-ms="270" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -537,14 +378,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:39 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:40 WAT" duration-ms="1225" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:52 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:53 WAT" duration-ms="1232" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:40 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:41 WAT" duration-ms="1075" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:53 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:38:58 WAT" duration-ms="4369" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -557,45 +398,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
-            <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -606,13 +408,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:41 WAT" name="tearDown" finished-at="2022-04-20T10:10:42 WAT" duration-ms="458" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:58 WAT" name="tearDown" finished-at="2022-04-20T14:38:58 WAT" duration-ms="256" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SUCCESS method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
@@ -622,14 +427,14 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:42 WAT" name="SetUpChrome" finished-at="2022-04-20T10:10:43 WAT" duration-ms="1305" status="PASS">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:58 WAT" name="SetUpChrome" finished-at="2022-04-20T14:38:59 WAT" duration-ms="1215" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:43 WAT" name="SelectCallAndGrid4" data-provider="GridData" finished-at="2022-04-20T10:10:44 WAT" duration-ms="1021" status="FAIL">
+        <test-method signature="SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:38:59 WAT" name="SelectCallAndGrid3" data-provider="GridData" finished-at="2022-04-20T14:39:03 WAT" duration-ms="3606" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -642,14 +447,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.testng.SkipException">
             <message>
-              <![CDATA[Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null]]>
+              <![CDATA[The selected activity: BU_TELCO_FREE_ENQUETTE_SAT has no calls]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "String.equalsIgnoreCase(String)" because "CallType" is null
-at pageObject.CallReportPO.FilterSearchWithActivity(CallReportPO.java:112)
-at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid4(CallReportTest.java:109)
+              <![CDATA[org.testng.SkipException: The selected activity: BU_TELCO_FREE_ENQUETTE_SAT has no calls
+at com.spokenly.digitarm.CallReportTest.SelectCallAndGrid3(CallReportTest.java:96)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -680,7 +484,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -691,13 +495,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             <line>
               <![CDATA[Running Filter ....]]>
             </line>
+            <line>
+              <![CDATA[Element is present ....]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- SelectCallAndGrid4 -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@2805d709]" started-at="2022-04-20T10:10:44 WAT" name="tearDown" finished-at="2022-04-20T10:10:44 WAT" duration-ms="406" status="PASS">
+        </test-method> <!-- SelectCallAndGrid3 -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f]" started-at="2022-04-20T14:39:03 WAT" name="tearDown" finished-at="2022-04-20T14:39:03 WAT" duration-ms="236" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=SelectCallAndGrid4 status=FAILURE method=CallReportTest.SelectCallAndGrid4(java.lang.String,java.lang.String)[pri:3, instance:com.spokenly.digitarm.CallReportTest@2805d709] output=Test is starting ....]]]>
+                <![CDATA[[TestResult name=SelectCallAndGrid3 status=SKIP method=CallReportTest.SelectCallAndGrid3(java.lang.String,java.lang.String)[pri:2, instance:com.spokenly.digitarm.CallReportTest@6e0f5f7f] output=Test is starting ....]]]>
               </value>
             </param>
           </params>
