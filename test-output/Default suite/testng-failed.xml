@@ -7,7 +7,7 @@
         <methods>
           <include name="SetUpChrome"/>
           <include name="tearDown"/>
-          <include name="SelectCallAndGrid3" invocation-numbers="6"/>
+          <include name="TestMethod" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- com.spokenly.digitarm.CallReportTest -->
     </classes>

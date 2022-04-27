@@ -1,6 +1,7 @@
 package pageObject;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -88,13 +89,18 @@ public class CallReportPO extends PageObject {
 
 //	@FindBy(xpath = "//input[@name='row-radio-buttons-group' and @value='1']")
 //	private List<WebElement> SubItemsRadioBtn;
-	
+
 	@FindBy(xpath = "//input[@name='value' and @value='0']")
 	private List<WebElement> SubItemsRadioBtn;
 
-
 	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-lg-5']/h6")
-	public WebElement NumberOfActivityCalls;
+	private WebElement NumberOfActivityCalls;
+
+	@FindBy(xpath = "//p[@class='MuiTypography-root MuiTypography-body1' and contains(text(),'Coéf')]")
+	public List<WebElement> ListofCoefElements;
+
+	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container']/form/div/p[@class='MuiTypography-root MuiTypography-body1']")
+	public List<WebElement> ListofSubItem;
 
 // Search Non Evaluated Calls by Agents
 	public void FilterSearch(String AgentID, String CallType) throws InterruptedException {
@@ -124,7 +130,7 @@ public class CallReportPO extends PageObject {
 		}
 		NonEvalueRadio.click();
 		AllActivitiesField.click();
-			Thread.sleep(1000);
+		Thread.sleep(1000);
 		WebElement MyActivites = driver.findElement(By.xpath("//li[normalize-space()='" + ActivityName + "']"));
 		wait.until(ExpectedConditions.elementToBeClickable(MyActivites));
 		MyActivites.click();
@@ -135,16 +141,15 @@ public class CallReportPO extends PageObject {
 //Selecting First Call then Select the corresponding grid is needed
 	public void GridSelecting(String GridName, boolean WillISelectGrid) {
 
-			FirstElementDetailsBtn.click();
-			AssessCallButton.click();
-			if (WillISelectGrid == true) {
-				WebElement MyGrid = driver.findElement(By.xpath("//input[@value='" + GridName + "']"));
-				//wait.until(ExpectedConditions.elementToBeClickable(MyGrid));
-				MyGrid.click();
-				NextButton.click();
-			}
+		FirstElementDetailsBtn.click();
+		AssessCallButton.click();
+		if (WillISelectGrid == true) {
+			WebElement MyGrid = driver.findElement(By.xpath("//input[@value='" + GridName + "']"));
+			// wait.until(ExpectedConditions.elementToBeClickable(MyGrid));
+			MyGrid.click();
+			NextButton.click();
 		}
-
+	}
 
 //Evaluating the Grid with random values
 	public void EvaluateGrid() {
@@ -154,8 +159,8 @@ public class CallReportPO extends PageObject {
 			for (int ElmntIndex = 0; ElmntIndex < SubItemsRadioBtn.size(); ElmntIndex++) {
 				// select a random value from the string array
 				int RandEval = RanDom.nextInt(EvalsNote.length);
-				List<WebElement> SubItemsEval = driver.findElements(
-						By.xpath("//input[@name='value' and @value='" + EvalsNote[RandEval] + "']"));
+				List<WebElement> SubItemsEval = driver
+						.findElements(By.xpath("//input[@name='value' and @value='" + EvalsNote[RandEval] + "']"));
 				// click on every radio button of a sub-item
 				boolean selectState = SubItemsEval.get(ElmntIndex).isSelected();
 				if (selectState == false) {
@@ -182,5 +187,65 @@ public class CallReportPO extends PageObject {
 		String StringNumberOfCalls = StringUtils.substringBefore(NumberOfActivityCalls.getText(), " results found");
 		int NumberOfCalls = Integer.parseInt(StringNumberOfCalls);
 		return NumberOfCalls;
+	}
+
+// Return the coef values of the sub-items in a table 
+//	public String[][] CoefValue(List<WebElement> myListofWebElements) {
+//		String CoefValue = null;
+//		String SubItemValye = null;
+//		String[][] MySubItemsCoef = new String[myListofWebElements.size()][myListofWebElements.size()];
+//		int myTabelLength = myListofWebElements.size() - 1;
+//		for (int i = 0; i <= myTabelLength; i++) {
+//			for (int j = 0; j <= myTabelLength; j++) {
+//
+//				CoefValue = StringUtils.substringAfter(myListofWebElements.get(i).getText(), "Coéf ");
+//				SubItemValye =ListofSubItem.get(i).getText();
+//				MySubItemsCoef[i][j] = SubItemValye;
+//			}
+//		}
+//		return MySubItemsCoef;
+//
+//	}
+	// Return the coef values of the sub-items in a table
+	public ArrayList<String> CoefandSubItemValue(boolean Coef, boolean Subitem) {
+		int NumberofSubItems = ListofSubItem.size();
+		ArrayList<String> MyListofCoef = new ArrayList<>();
+		ArrayList<String> MyListofSubItem = new ArrayList<>();
+	//	ArrayList<ArrayList<String>> MySubItemAndCoef = new ArrayList<>(NumberofSubItems);
+		if (Coef == true) {
+			for (int i = 0; i < NumberofSubItems; i++) {
+				MyListofCoef.add(StringUtils.substringAfter(ListofCoefElements.get(i).getText(), "Coéf "));
+
+			}
+			return MyListofCoef;
+		}
+
+		else if (Subitem == true) {
+
+			for (int j = 0; j < NumberofSubItems; j++) {
+				MyListofSubItem.add(ListofSubItem.get(j).getText());
+			}
+			return MyListofSubItem;
+
+		}
+
+//			MySubItemAndCoef.add(MyListofCoef);
+//			MySubItemAndCoef.add(MyListofSubItem);
+		else {
+			return null;
+		}
+
+//			System.out.println("MyCoef sont: " + MyListofCoef);
+//			System.out.println("MyListofSubItem sont: " + MyListofSubItem);
+//			System.out.println("MyList is: " + MySubItemAndCoef);
+
+	}
+
+	public boolean CompareCoef(int MycurrentCoef, int MyExpectedCoef) {
+		if (MycurrentCoef == MyExpectedCoef) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

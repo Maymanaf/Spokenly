@@ -1,7 +1,10 @@
 package com.spokenly.digitarm;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -19,7 +22,7 @@ import pageObject.LoginPO;
 
 public class CallReportTest extends Base {
 	private String currentpath = System.getProperty("user.dir");
-	private String path = currentpath + "/datafiles/TestData.xlsx";
+	private String path = currentpath + "/datafiles/MyCoefTable.xlsx";
 	private CallReportPO PageObjectCallReport;
 	private LoginPO PageObjectLogin;
 
@@ -107,11 +110,37 @@ public class CallReportTest extends Base {
 		}
 	}
 
+	@Test(priority = 3, dataProvider = "CoefandSubItemData")
+	public void TestMethod(String Coef) throws InterruptedException {
+		Reporter.log("Test is starting ....", true);
+		PageObjectLogin.Authenticate("sami", "spokenly");
+		Reporter.log("Logged in successfully", true);
+		Reporter.log("Running Filter ....", true);
+		PageObjectCallReport.FilterSearch("DL1636", "All");
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.FirstElementAgent, "DL1636"));
+		String myAgentId = PageObjectCallReport.FirstElementAgent.getText();
+		Assert.assertTrue(myAgentId.contains("DL1636"));
+		Reporter.log("Agent DL1967 calls are selected ", true);
+		PageObjectCallReport.GridSelecting("BU TELCO_Orange FTTH Préalable_Appel Entrant", true);
+		Reporter.log("The grid is selected successfully", true);
+		System.out.println(PageObjectCallReport.CoefandSubItemValue(true,false));
+		Assert.assertEquals(Coef, PageObjectCallReport.CoefandSubItemValue(true,false));
+	}	
+
 	@DataProvider(name = "GridData")
 
-	public Object[][] getData() {
+	public Object[][] getGridData() {
 
 		Object[][] arrObj = GetExcelData.getExcelData(path, "GridsandActivites");
+		return arrObj;
+	}
+
+	@DataProvider(name = "CoefandSubItemData")
+
+	public Object[][] getCoefData() {
+
+		Object[][] arrObj = GetExcelData.getExcelData(path, "MyCoefData");
 		return arrObj;
 	}
 
