@@ -1,28 +1,21 @@
 package com.spokenly.digitarm;
 
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import pageObject.CallReportPO;
 import pageObject.LoginPO;
 
-public class CallReportTest extends Base {
-	private String currentpath = System.getProperty("user.dir");
-	private String path = currentpath + "/datafiles/MyCoefTable.xlsx";
+public class RandomEval extends Base {
+
 	private CallReportPO PageObjectCallReport;
 	private LoginPO PageObjectLogin;
 
@@ -38,9 +31,9 @@ public class CallReportTest extends Base {
 	}
 
 	@Test(priority = 0)
-	public void SelectCallAndGrid1() throws InterruptedException {
+	public void SCRandomEvalByAgent() throws InterruptedException {
 		Reporter.log("Test is starting ....", true);
-		PageObjectLogin.Authenticate("sami", "spokenly");
+		PageObjectLogin.Authenticate("AymenNaf", "spokenly");
 		Reporter.log("Logged in successfully", true);
 		Reporter.log("Running Filter ....", true);
 		PageObjectCallReport.FilterSearch("DL1967", "Sortant");
@@ -61,9 +54,9 @@ public class CallReportTest extends Base {
 	}
 
 	@Test(priority = 1)
-	public void SelectCallAndGrid2() throws InterruptedException {
+	public void ECRandomEvalByAgent() throws InterruptedException {
 		Reporter.log("Test is starting ....", true);
-		PageObjectLogin.Authenticate("sami", "spokenly");
+		PageObjectLogin.Authenticate("AymenNaf", "spokenly");
 		Reporter.log("Logged in successfully", true);
 		Reporter.log("Running Filter ....", true);
 		PageObjectCallReport.FilterSearch("DL1636", "Entrant");
@@ -83,67 +76,6 @@ public class CallReportTest extends Base {
 
 	}
 
-	@Test(priority = 2, dataProvider = "GridData")
-	public void GridVerification(String Activity, String Grid) throws InterruptedException {
-
-		Reporter.log("Test is starting ....", true);
-		PageObjectLogin.Authenticate("sami", "spokenly");
-		Reporter.log("Logged in successfully", true);
-		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearchWithActivity(Activity, "All");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.AllActivitiesField, Activity));
-		Reporter.log("Element is present ....", true);
-		Thread.sleep(1000);
-		if (PageObjectCallReport.CallsNumber() == 0) {
-			throw new SkipException("The selected activity: " + Activity + " has no calls");
-		} else {
-			try {
-				PageObjectCallReport.GridSelecting(Grid, false);
-			} catch (org.openqa.selenium.StaleElementReferenceException ex) {
-				PageObjectCallReport.GridSelecting(Grid, false);
-			}
-			for (WebElement DisplayedGrid : PageObjectCallReport.GirdList) {
-				if (DisplayedGrid.getText() == Grid)
-					Reporter.log("The grid is avaialble for this activity", true);
-			}
-		}
-	}
-
-	@Test(priority = 3, dataProvider = "CoefandSubItemData")
-	public void TestMethod(String Coef) throws InterruptedException {
-		Reporter.log("Test is starting ....", true);
-		PageObjectLogin.Authenticate("sami", "spokenly");
-		Reporter.log("Logged in successfully", true);
-		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearch("DL1636", "All");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.FirstElementAgent, "DL1636"));
-		String myAgentId = PageObjectCallReport.FirstElementAgent.getText();
-		Assert.assertTrue(myAgentId.contains("DL1636"));
-		Reporter.log("Agent DL1967 calls are selected ", true);
-		PageObjectCallReport.GridSelecting("BU TELCO_Orange FTTH Préalable_Appel Entrant", true);
-		Reporter.log("The grid is selected successfully", true);
-		System.out.println(PageObjectCallReport.CoefandSubItemValue(true,false));
-		Assert.assertEquals(Coef, PageObjectCallReport.CoefandSubItemValue(true,false));
-	}	
-
-	@DataProvider(name = "GridData")
-
-	public Object[][] getGridData() {
-
-		Object[][] arrObj = GetExcelData.getExcelData(path, "GridsandActivites");
-		return arrObj;
-	}
-
-	@DataProvider(name = "CoefandSubItemData")
-
-	public Object[][] getCoefData() {
-
-		Object[][] arrObj = GetExcelData.getExcelData(path, "MyCoefData");
-		return arrObj;
-	}
-
 	@AfterMethod
 
 	public void tearDown(ITestResult result) {
@@ -155,4 +87,5 @@ public class CallReportTest extends Base {
 		driver.quit();
 		Reporter.log("Browser closed", true);
 	}
+
 }

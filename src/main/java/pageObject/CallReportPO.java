@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
@@ -22,7 +23,10 @@ public class CallReportPO extends PageObject {
 
 	private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-//List of public locators 
+	/************************************************
+	 * public locators
+	 *********************************************************************/
+
 	@FindBy(xpath = "//ol[@class=\"MuiBreadcrumbs-ol\"]/li[last()]")
 	public WebElement CallReportLastBreadcrumb;
 
@@ -47,7 +51,16 @@ public class CallReportPO extends PageObject {
 	@FindBy(xpath = "//input[@value='BU IT_M30 sortant']")
 	public WebElement BUITM30sortantGrid;
 
-//List of private locators 
+	@FindBy(xpath = "//p[@class='MuiTypography-root MuiTypography-body1' and contains(text(),'Coéf')]")
+	public List<WebElement> ListofCoefElements;
+
+	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container']/form/div/p[@class='MuiTypography-root MuiTypography-body1']")
+	public List<WebElement> ListofSubItem;
+
+	/************************************************
+	 * private locators
+	 *********************************************************************/
+
 	@FindBy(xpath = "//h6[normalize-space()='Advanced filters']")
 	private WebElement AdvancedFilterBtn;
 
@@ -87,20 +100,15 @@ public class CallReportPO extends PageObject {
 	@FindBy(xpath = "//span[@class='MuiButton-label' and contains(text(),'Envoie')]")
 	private WebElement SendButton;
 
-//	@FindBy(xpath = "//input[@name='row-radio-buttons-group' and @value='1']")
-//	private List<WebElement> SubItemsRadioBtn;
-
 	@FindBy(xpath = "//input[@name='value' and @value='0']")
 	private List<WebElement> SubItemsRadioBtn;
 
 	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-lg-5']/h6")
 	private WebElement NumberOfActivityCalls;
 
-	@FindBy(xpath = "//p[@class='MuiTypography-root MuiTypography-body1' and contains(text(),'Coéf')]")
-	public List<WebElement> ListofCoefElements;
-
-	@FindBy(xpath = "//div[@class='MuiGrid-root MuiGrid-container']/form/div/p[@class='MuiTypography-root MuiTypography-body1']")
-	public List<WebElement> ListofSubItem;
+	/************************************************
+	 * page methods
+	 *********************************************************************/
 
 // Search Non Evaluated Calls by Agents
 	public void FilterSearch(String AgentID, String CallType) throws InterruptedException {
@@ -113,7 +121,7 @@ public class CallReportPO extends PageObject {
 		NonEvalueRadio.click();
 		AgentSpeakSdField.sendKeys(AgentID);
 		wait.until(ExpectedConditions.attributeToBe(AgentSpeakSdField, "value", AgentID));
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		AgentSpeakSdField.sendKeys(Keys.ARROW_DOWN);
 		wait.until(ExpectedConditions.attributeToBeNotEmpty(AgentSpeakSdField, "aria-activedescendant"));
 		AgentSpeakSdField.sendKeys(Keys.ENTER);
@@ -189,63 +197,23 @@ public class CallReportPO extends PageObject {
 		return NumberOfCalls;
 	}
 
-// Return the coef values of the sub-items in a table 
-//	public String[][] CoefValue(List<WebElement> myListofWebElements) {
-//		String CoefValue = null;
-//		String SubItemValye = null;
-//		String[][] MySubItemsCoef = new String[myListofWebElements.size()][myListofWebElements.size()];
-//		int myTabelLength = myListofWebElements.size() - 1;
-//		for (int i = 0; i <= myTabelLength; i++) {
-//			for (int j = 0; j <= myTabelLength; j++) {
-//
-//				CoefValue = StringUtils.substringAfter(myListofWebElements.get(i).getText(), "Coéf ");
-//				SubItemValye =ListofSubItem.get(i).getText();
-//				MySubItemsCoef[i][j] = SubItemValye;
-//			}
-//		}
-//		return MySubItemsCoef;
-//
-//	}
-	// Return the coef values of the sub-items in a table
-	public ArrayList<String> CoefandSubItemValue(boolean Coef, boolean Subitem) {
+	// Return the coef and sub-items values in a array list
+	public ArrayList<String> CoefandSubItemValue() {
 		int NumberofSubItems = ListofSubItem.size();
 		ArrayList<String> MyListofCoef = new ArrayList<>();
 		ArrayList<String> MyListofSubItem = new ArrayList<>();
-	//	ArrayList<ArrayList<String>> MySubItemAndCoef = new ArrayList<>(NumberofSubItems);
-		if (Coef == true) {
-			for (int i = 0; i < NumberofSubItems; i++) {
-				MyListofCoef.add(StringUtils.substringAfter(ListofCoefElements.get(i).getText(), "Coéf "));
-
-			}
-			return MyListofCoef;
+//		ArrayList<String>> MySubItemAndCoef = new ArrayList<>(NumberofSubItems);
+		for (int i = 0; i < NumberofSubItems; i++) {
+			MyListofCoef.add(StringUtils.substringAfter(ListofCoefElements.get(i).getText(), "Coéf "));
 		}
 
-		else if (Subitem == true) {
-
-			for (int j = 0; j < NumberofSubItems; j++) {
-				MyListofSubItem.add(ListofSubItem.get(j).getText());
-			}
-			return MyListofSubItem;
-
+		for (int j = 0; j < NumberofSubItems; j++) {
+			MyListofSubItem.add(ListofSubItem.get(j).getText());
 		}
 
-//			MySubItemAndCoef.add(MyListofCoef);
-//			MySubItemAndCoef.add(MyListofSubItem);
-		else {
-			return null;
-		}
-
-//			System.out.println("MyCoef sont: " + MyListofCoef);
-//			System.out.println("MyListofSubItem sont: " + MyListofSubItem);
-//			System.out.println("MyList is: " + MySubItemAndCoef);
+		MyListofSubItem.addAll(MyListofCoef);
+		return MyListofSubItem;
 
 	}
 
-	public boolean CompareCoef(int MycurrentCoef, int MyExpectedCoef) {
-		if (MycurrentCoef == MyExpectedCoef) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 }
