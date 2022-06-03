@@ -11,12 +11,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import pageObject.CallReportPO;
+import pageObject.CallEvalPO;
 import pageObject.LoginPO;
 
 public class RandomEval extends Base {
 
-	private CallReportPO PageObjectCallReport;
+	private CallEvalPO PageObjectCallEval;
 	private LoginPO PageObjectLogin;
 
 	@BeforeMethod
@@ -24,7 +24,7 @@ public class RandomEval extends Base {
 		// Initialize browser
 		InitilizeChrome();
 		// Locators Page
-		PageObjectCallReport = new CallReportPO(driver);
+		PageObjectCallEval = new CallEvalPO(driver);
 		PageObjectLogin = new LoginPO(driver);
 		Reporter.log("Driver got initialized", true);
 
@@ -36,19 +36,19 @@ public class RandomEval extends Base {
 		PageObjectLogin.Authenticate("AymenNaf", "spokenly");
 		Reporter.log("Logged in successfully", true);
 		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearch("DL1967", "Sortant");
+		PageObjectCallEval.FilterSearch("DL1967", "Sortant");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.FirstElementAgent, "DL1967"));
-		String myAgentId = PageObjectCallReport.FirstElementAgent.getText();
+		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallEval.FirstElementAgent, "DL1967"));
+		String myAgentId = PageObjectCallEval.FirstElementAgent.getText();
 		Assert.assertTrue(myAgentId.contains("DL1967"));
 		Reporter.log("Agent DL1967 calls are selected ", true);
-		PageObjectCallReport.GridSelecting("BU TELCO_Orange FTTH_Agence_Appel Sortant", true);
+		PageObjectCallEval.GridSelecting("BU TELCO_Orange FTTH_Agence_Appel Sortant", true);
 		Reporter.log("The grid is selected successfully", true);
 		Reporter.log("The grid is being evaluated ....", true);
-		PageObjectCallReport.EvaluateGrid();
-		PageObjectCallReport.GridBreefing();
+		PageObjectCallEval.EvaluateGridWithoutSI();
+		PageObjectCallEval.GridBreefing();
 		Reporter.log("The grid is successfully evaluated", true);
-		String LastBreadcrumb = PageObjectCallReport.CallReportLastBreadcrumb.getText();
+		String LastBreadcrumb = PageObjectCallEval.CallReportLastBreadcrumb.getText();
 		Assert.assertEquals(LastBreadcrumb, "Report call");
 
 	}
@@ -59,19 +59,19 @@ public class RandomEval extends Base {
 		PageObjectLogin.Authenticate("AymenNaf", "spokenly");
 		Reporter.log("Logged in successfully", true);
 		Reporter.log("Running Filter ....", true);
-		PageObjectCallReport.FilterSearch("DL1636", "Entrant");
+		PageObjectCallEval.FilterSearch("DL1636", "Entrant");
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallReport.FirstElementAgent, "DL1636"));
-		String myAgentId = PageObjectCallReport.FirstElementAgent.getText();
+		wait.until(ExpectedConditions.textToBePresentInElement(PageObjectCallEval.FirstElementAgent, "DL1636"));
+		String myAgentId = PageObjectCallEval.FirstElementAgent.getText();
 		Assert.assertTrue(myAgentId.contains("DL1636"));
 		Reporter.log("Agent DL1967 calls are selected ", true);
-		PageObjectCallReport.GridSelecting("BU TELCO_Orange FTTH Préalable_Appel Entrant", true);
+		PageObjectCallEval.GridSelecting("BU TELCO_Orange FTTH Préalable_Appel Entrant", true);
 		Reporter.log("The grid is selected successfully", true);
 		Reporter.log("The grid is being evaluated ....", true);
-		PageObjectCallReport.EvaluateGrid();
-		PageObjectCallReport.GridBreefing();
+		PageObjectCallEval.EvaluateGridWithSI();
+		PageObjectCallEval.GridBreefing();
 		Reporter.log("The grid is successfully evaluated", true);
-		String LastBreadcrumb = PageObjectCallReport.CallReportLastBreadcrumb.getText();
+		String LastBreadcrumb = PageObjectCallEval.CallReportLastBreadcrumb.getText();
 		Assert.assertEquals(LastBreadcrumb, "Report call");
 
 	}

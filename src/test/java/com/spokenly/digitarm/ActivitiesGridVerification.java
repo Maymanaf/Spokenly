@@ -13,14 +13,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import pageObject.CallReportPO;
+import pageObject.CallEvalPO;
 import pageObject.LoginPO;
 
 public class ActivitiesGridVerification extends Base {
 
 	private String currentpath = System.getProperty("user.dir");
 	private String path = currentpath + "/datafiles/GridsandActivites.xlsx";
-	private CallReportPO PageObjectCallReport;
+	private CallEvalPO PageObjectCallReport;
 	private LoginPO PageObjectLogin;
 
 	@BeforeMethod
@@ -28,7 +28,7 @@ public class ActivitiesGridVerification extends Base {
 		// Initialize browser
 		InitilizeChrome();
 		// Locators Page
-		PageObjectCallReport = new CallReportPO(driver);
+		PageObjectCallReport = new CallEvalPO(driver);
 		PageObjectLogin = new LoginPO(driver);
 		Reporter.log("Driver got initialized", true);
 

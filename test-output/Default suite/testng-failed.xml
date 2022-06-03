@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spokenly.digitarm.GridSubItemAndCoefVerification">
+      <class name="com.spokenly.digitarm.TestClass">
         <methods>
+          <include name="VerifyEval"/>
           <include name="SetUpChrome"/>
-          <include name="ItemCoefVerifcation" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.spokenly.digitarm.GridSubItemAndCoefVerification -->
+      </class> <!-- com.spokenly.digitarm.TestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

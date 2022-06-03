@@ -11,35 +11,28 @@
       <![CDATA[Logged in successfully]]>
     </line>
     <line>
-      <![CDATA[Running Filter ....]]>
+      <![CDATA[First Call details in opened successfully]]>
     </line>
     <line>
-      <![CDATA[Agent DL1967 calls are selected ]]>
+      <![CDATA[The eval report page is displaying .... ]]>
     </line>
     <line>
-      <![CDATA[The grid is selected successfully]]>
+      <![CDATA[The list of sub-items is expanded successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2022-06-02T11:09:19 WAT" name="Default suite" finished-at="2022-06-02T11:09:29 WAT" duration-ms="9910">
+  <suite started-at="2022-06-03T15:19:13 WAT" name="Default suite" finished-at="2022-06-03T15:19:21 WAT" duration-ms="8287">
     <groups>
     </groups>
-    <test started-at="2022-06-02T11:09:19 WAT" name="Default test" finished-at="2022-06-02T11:09:29 WAT" duration-ms="9910">
-      <class name="com.spokenly.digitarm.GridSubItemAndCoefVerification">
-        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.GridSubItemAndCoefVerification@6221a451]" started-at="2022-06-02T11:09:20 WAT" name="SetUpChrome" finished-at="2022-06-02T11:09:23 WAT" duration-ms="2984" status="PASS">
+    <test started-at="2022-06-03T15:19:13 WAT" name="Default test" finished-at="2022-06-03T15:19:21 WAT" duration-ms="8287">
+      <class name="com.spokenly.digitarm.TestClass">
+        <test-method is-config="true" signature="SetUpChrome()[pri:0, instance:com.spokenly.digitarm.TestClass@71ba6d4e]" started-at="2022-06-03T15:19:13 WAT" name="SetUpChrome" finished-at="2022-06-03T15:19:17 WAT" duration-ms="4391" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Driver got initialized]]>
             </line>
           </reporter-output>
         </test-method> <!-- SetUpChrome -->
-        <test-method signature="ItemCoefVerifcation(java.lang.String)[pri:0, instance:com.spokenly.digitarm.GridSubItemAndCoefVerification@6221a451]" started-at="2022-06-02T11:09:23 WAT" name="ItemCoefVerifcation" data-provider="CoefandSubItemData" finished-at="2022-06-02T11:09:29 WAT" duration-ms="6262" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Accueil de l'interlocuteur, Identification, 60, 50]]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="VerifyEval()[pri:0, instance:com.spokenly.digitarm.TestClass@71ba6d4e]" started-at="2022-06-03T15:19:17 WAT" name="VerifyEval" finished-at="2022-06-03T15:19:21 WAT" duration-ms="3863" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test is starting ....]]>
@@ -48,17 +41,17 @@
               <![CDATA[Logged in successfully]]>
             </line>
             <line>
-              <![CDATA[Running Filter ....]]>
+              <![CDATA[First Call details in opened successfully]]>
             </line>
             <line>
-              <![CDATA[Agent DL1967 calls are selected ]]>
+              <![CDATA[The eval report page is displaying .... ]]>
             </line>
             <line>
-              <![CDATA[The grid is selected successfully]]>
+              <![CDATA[The list of sub-items is expanded successfully]]>
             </line>
           </reporter-output>
-        </test-method> <!-- ItemCoefVerifcation -->
-      </class> <!-- com.spokenly.digitarm.GridSubItemAndCoefVerification -->
+        </test-method> <!-- VerifyEval -->
+      </class> <!-- com.spokenly.digitarm.TestClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

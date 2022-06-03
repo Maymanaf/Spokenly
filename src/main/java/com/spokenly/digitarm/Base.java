@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -40,6 +39,7 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		// Maximize browser
 		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 		// Open Website
 		driver.get(APIUrl);
 		WebElement Bitdefender = driver
