@@ -50,6 +50,25 @@ public class TestClass extends Base {
 		PageObjectCallReport.MyEvalResults();
 
 	}
+	
+	public void VerifyEval2() {
+		Reporter.log("Test is starting ....", true);
+		PageObjectLogin.Authenticate("AymenNaf", "spokenly");
+		Reporter.log("Logged in successfully", true);
+//		Reporter.log("Running Filter ....", true);
+//		PageObjectCallEval.FilterSearchForEvaluatedCalls("Sortant");
+		PageObjectCallEval.FirstElementDetailsBtn.click();
+		Reporter.log("First Call details in opened successfully", true);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(PageObjectCallReport.ViewDetailsButton));
+		PageObjectCallReport.ViewDetailsButton.click();
+		Reporter.log("The eval report page is displaying .... ", true);
+		PageObjectCallReport.ExpandsSubItemList();
+		Reporter.log("The list of sub-items is expanded successfully", true);
+		PageObjectCallReport.MyEvalResults();
+
+	}
+
 
 //	@AfterMethod
 //

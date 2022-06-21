@@ -1,11 +1,15 @@
 package pageObject;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CallReportPO extends PageObject {
 
@@ -17,7 +21,7 @@ public class CallReportPO extends PageObject {
 	 * private locators
 	 ************************************************/
 	@FindBy(xpath = "//table[@class='MuiTable-root']//p[contains(text(),'View details')]")
-	private List<WebElement> ViewDetailsLinks;
+	public List<WebElement> ViewDetailsLinks;
 
 	@FindBy(xpath = "//tr[@class=\"MuiTableRow-root\"]/td[1]/p")
 	public List<WebElement> CoefValues;
@@ -54,6 +58,8 @@ public class CallReportPO extends PageObject {
 
 	public void ExpandsSubItemList() {
 		for (WebElement ViewDetails : ViewDetailsLinks) {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.elementToBeClickable(ViewDetails));
 			ViewDetails.click();
 		}
 	}

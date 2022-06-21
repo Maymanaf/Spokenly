@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.spokenly.digitarm.TestClass">
+      <class name="com.spokenly.digitarm.RandomEval">
         <methods>
-          <include name="VerifyEval"/>
           <include name="SetUpChrome"/>
+          <include name="SCRandomEvalByAgent"/>
         </methods>
-      </class> <!-- com.spokenly.digitarm.TestClass -->
+      </class> <!-- com.spokenly.digitarm.RandomEval -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

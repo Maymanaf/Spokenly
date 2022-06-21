@@ -193,7 +193,9 @@ public class CallEvalPO extends PageObject {
 			}
 			SuivantButton.click();
 		}
+		System.out.println(EvaluatedValue);
 		return EvaluatedValue;
+		
 	}
 
 //Filling the briefing fields with texts
